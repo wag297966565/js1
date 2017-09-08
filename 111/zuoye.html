@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//表格
+		function table(rows,cols){
+		var table='<table border=1 cellspacing=0>';
+			for(var i=1;i<=rows;i++){
+				table=table+'<tr>'
+					for(var j=1;j<=cols;j++){
+						table=table+'<td>'+j+'*'+i+'='+(i*j)+'</td>'
+					}
+				table=table+'</tr>'	
+			}
+		document.write(table)
+		}
+		// 金字塔
+		function jzt(t){
+			for(var i=1;i<=t;i++){
+				for(var j=1;j<=t-i;j++){
+					document.write('-')
+				}
+				for(var j=1;j<=2*i-1;j++){
+					document.write('*')
+				}
+				document.write('<br/>')
+			}
+		}
+		// 斐波那契
+		function fbnq(o){
+		var i=0;j=1;
+		for(var k=1;k<=o;){
+			document.write(k+'&nbsp')
+			k=i+j;
+			i=j;
+			j=k;
+			}
+		}
+		// 最大值
+	     function ywmax(arr)	{
+			var max=arr[0];
+				for(var i=0;i<=arr.length-1;i++){
+					if(max<arr[i]){
+						max=arr[i]
+					}
+				}
+		console.log(max);
+		}
+		// 最小值
+		function ywmin(arr1){
+					var min=arr1[0];
+					for(var i=0;i<=arr1.length-1;i++){
+						if(min>arr1[i]){
+							min=arr1[i]
+					}
+				}
+				console.log(min);
+		}
+		// 倒序
+		 function sx(sxu){
+			for(var i=0;i<sxu.length;i++){
+				for(var j=i+1;j<sxu.length;j++){
+					if(sxu[i]<sxu[j]){
+						var temp=sxu[i]
+						sxu[i]=sxu[j]
+						sxu[j]=temp
+					}
+				}
+			}
+			console.log(sxu)
+		}
+		// 二维最大值
+		 function ewmax(hha){
+		var max=hha[0][0]
+		for(var i=0;i<hha.length;i++){
+			for(var j=0;j<hha[i].length;j++){
+				if(max < hha[i][j]){
+					max=hha[i][j]
+				}
+			}
+		}
+		console.log(max)
+		// 去空
+		function qk(qu){
+		var newarr=[];
+		for(var i=0;i<qu.length;i++){
+			if(qu[i]!=undefined){
+				newarr[newarr.length]=qu[i]
+			}
+		}
+		console.log(newarr)
+		}		
+	</script>
+</body>
+</html>
